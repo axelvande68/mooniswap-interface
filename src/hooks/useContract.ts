@@ -113,7 +113,8 @@ export function useOneSplit(): Contract | null {
 export function useChiController(): Contract | null {
   const { chainId } = useActiveWeb3React()
   return useContract(
-    chainId === ChainId.MAINNET ? '0x0000000000004946c0e9F43F4Dee607b0eF1fA1c' : undefined,
+    // chainId === ChainId.MAINNET ? '0x0000000000004946c0e9F43F4Dee607b0eF1fA1c' : undefined,
+    '0x0000000000004946c0e9F43F4Dee607b0eF1fA1c',
     CHI_ABI,
     false
   )
