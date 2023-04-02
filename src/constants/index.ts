@@ -21,7 +21,7 @@ export const USDC = new Token(ChainId.GÖRLI, '0x07865c6e87b9f70255377e024ace663
 export const USDT = new Token(ChainId.GÖRLI, '0xe802376580c10fe23f027e1e19ed9d54d4c9311e', 6, 'USDT', 'Tether USD')
 export const COMP = new Token(ChainId.GÖRLI, '0xcc7bb2d219a0fc08033e130629c2b854b7ba9195', 18, 'ZETA', 'Zeta')
 export const MKR = new Token(ChainId.GÖRLI, '0x2166903c38b4883b855ea2c77a02430a27cdfede', 18, 'ERC20', 'TestnetERC20')
-export const CHI = new Token(ChainId.GÖRLI, '0x0000000000004946c0e9F43F4Dee607b0eF1fA1c', 0, 'NUSD', 'NUSDToken')
+export const CHI = new Token(ChainId.GÖRLI, '0x0000000000004946c0e9F43F4Dee607b0eF1fA1c', 0, 'CHI', 'Chi Gastoken by 1inch')
 
 const ETH_ONLY: ChainTokenList = {
   [ChainId.MAINNET]: [ETHER],
@@ -34,19 +34,22 @@ const ETH_ONLY: ChainTokenList = {
 // used to construct intermediary pairs for trading
 export const BASES_TO_CHECK_TRADES_AGAINST: ChainTokenList = {
   ...ETH_ONLY,
-  [ChainId.GÖRLI]: [DAI, USDC, USDT, COMP, MKR, CHI]
+  [ChainId.GÖRLI]: [DAI]
+  // [ChainId.GÖRLI]: [DAI, USDC, USDT, COMP, MKR, CHI]
 }
 
 // used for display in the default list when adding liquidity
 export const SUGGESTED_BASES: ChainTokenList = {
   ...ETH_ONLY,
-  [ChainId.GÖRLI]: [DAI, USDC, USDT, CHI]
+  [ChainId.GÖRLI]: [CHI]
+  // [ChainId.GÖRLI]: [DAI, USDC, USDT, CHI]
 }
 
 // used to construct the list of all pairs we consider by default in the frontend
 export const BASES_TO_TRACK_LIQUIDITY_FOR: ChainTokenList = {
   ...ETH_ONLY,
-  [ChainId.GÖRLI]: [ETHER, DAI, USDC, USDT, CHI]
+  [ChainId.GÖRLI]: [ETHER, CHI]
+  // [ChainId.GÖRLI]: [ETHER, DAI, USDC, USDT, CHI]
 }
 
 export const PINNED_PAIRS: { readonly [chainId in ChainId]?: [Token, Token][] } = {
