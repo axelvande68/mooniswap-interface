@@ -18,7 +18,7 @@ const ONE_SPLIT_ADDRESSES: { [chainId in ChainId]: string } = {
   [ChainId.MAINNET]: '0x50FDA034C0Ce7a8f7EFDAebDA7Aa7cA21CC1267e',
   [ChainId.ROPSTEN]: '',
   [ChainId.RINKEBY]: '',
-  [ChainId.GÖRLI]: '',
+  [ChainId.GÖRLI]: '0xdB4cd2765F219b2c84c46a9F2093b5e4Da7e444A',
   [ChainId.KOVAN]: ''
 }
 
